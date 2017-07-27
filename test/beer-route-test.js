@@ -14,6 +14,7 @@ describe('Beer Routes', function() {
       .send({ name: 'test name', style: 'test style', IBU: 'test IBU' })
       .end((err, res) => {
         if (err) return done(err);
+        console.log(res.body);
         expect(res.status).to.equal(200);
         expect(res.body.name).to.equal('test name');
         expect(res.body.style).to.equal('test style');
