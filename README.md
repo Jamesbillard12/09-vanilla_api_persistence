@@ -13,16 +13,63 @@ request.post('localhost:8000/api/beer')
 .send({ name: 'Have a Nice Day IPA', style: 'IPA', IBU: '43' })
 ```
 
-This is a representation of the post method. You can see that we first make a request to post to
+This is a representation of the POST method. You can see that we first make a request to post to
 ```
 localhost:8000
 ```
 with a route of
 ```
-/api/beer.
+/api/beer
 ```
 Once the connection has bee made we send our beer in
 ```
 .send({ name: 'Have a Nice Day IPA', style: 'IPA', IBU: '43' })
 ```
-format.
+format. This will respond with 200 if the request was made or 400 if not.
+
+### GET
+
+```
+request.get(`localhost:8000/api/beer?id=${beer.id}`)
+```
+This is a representation of the GET method. You can see that we first make a request to post to
+
+```
+localhost:8000
+```
+with a route of
+
+```
+/api/beer
+```
+
+finally with finish the request with reference to a specific id which was generated with uuid
+
+```
+?id=${beer.id}
+```
+
+This will respond with 200 if the request was made, 404 if not found or 400 if the request was made in wrong format.
+
+### DELETE
+
+```
+request.delete(`localhost:8000/api/beer?id=${beer.id}`)
+```
+
+This is a representation of the POST method. You can see that we first make a request to post to
+
+```
+localhost:8000
+```
+with a route of
+
+```
+/api/beer
+```
+finally with finish the request with reference to a specific id which was generated with uuid
+```
+?id=${beer.id}
+```
+
+This will respond with 200 if the request was made, 404 if not found or 400 if the request was made in wrong format.
