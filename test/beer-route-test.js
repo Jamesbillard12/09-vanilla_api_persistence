@@ -23,9 +23,6 @@ describe('Beer Routes', function() {
         done();
       });
     });
-  });
-
-  describe('POST: /api/beer', function() {
     it('should return 400', function(done) {
       request.post('localhost:8000/api/beer')
       .send({})
@@ -48,9 +45,6 @@ describe('Beer Routes', function() {
         done();
       });
     });
-  });
-
-  describe('GET: /api/beer', function() {
     it('should return 404 not found', function(done) {
       request.get('localhost:8000/api/beer?id=6194fa11-758f-477f-a597-61a5a8ca65cb')
       .end((err, res) => {
@@ -58,9 +52,6 @@ describe('Beer Routes', function() {
         done();
       });
     });
-  });
-
-  describe('GET: /api/beer', function() {
     it('should return 400 bad request', function(done) {
       request.get('localhost:8000/api/beer?id=')
       .end((err, res) => {
