@@ -6,7 +6,7 @@ This app builds out an API where data is stored in the file system. This API sto
 ## API:
 The URL endpoint to access the api is `/api/beer`.  Using REST architecture the data is read, written and deleted using `GET`, `POST` and `DELETE` requests.
 
-###POST:
+### POST:
 
 ```
 request.post('localhost:8000/api/beer')
